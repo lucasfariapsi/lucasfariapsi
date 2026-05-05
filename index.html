@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucas Gomes Faria | Psicólogo em Brasília | Gestalt-Terapia e TCC | Atendimento Online e Presencial</title>
+  <meta name="description" content="Lucas Gomes Faria, psicólogo em Brasília (CRP 01/25153). Atendimento online e presencial para adolescentes e adultos. Especialista em Gestalt-Terapia e TCC. Agende sua sessão." />
+  <meta name="keywords" content="psicólogo Brasília, psicólogo TCC, psicólogo Gestalt-Terapia, atendimento online psicólogo, atendimento remoto psicólogo, psicólogo DF, psicoterapia Brasília, terapia online, Lucas Gomes Faria psicólogo" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Lucas Gomes Faria | Psicólogo em Brasília" />
+  <meta property="og:description" content="Psicólogo em Brasília com atendimento online e presencial. Gestalt-Terapia e TCC para adolescentes e adultos. CRP 01/25153." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://lucasgomesfaria.com.br" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:       oklch(97.2% 0.009 68);
+      --cream-mid:   oklch(94%   0.014 65);
+      --cream-dark:  oklch(88%   0.022 60);
+      --brown:       oklch(33%   0.072 50);
+      --brown-mid:   oklch(48%   0.065 50);
+      --brown-light: oklch(72%   0.042 55);
+      --brown-pale:  oklch(92%   0.020 58);
+      --text:        oklch(22%   0.04  50);
+      --text-soft:   oklch(48%   0.04  52);
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans:  'DM Sans', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      background: var(--cream); color: var(--text);
+      font-family: var(--sans); font-weight: 300;
+      line-height: 1.7; overflow-x: hidden;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 76px;
+      background: oklch(97.2% 0.009 68 / 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid oklch(88% 0.022 60 / 0.5);
+      transition: box-shadow 0.3s;
+    }
+    nav.scrolled { box-shadow: 0 2px 24px oklch(33% 0.072 50 / 0.08); }
+
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo img { height: 32px; width: auto; flex-shrink: 0; }
+    .nav-logo-text { display: flex; flex-direction: column; }
+    .nav-logo-name {
+      font-family: var(--serif); font-size: 13.5px; font-weight: 500;
+      color: var(--brown); line-height: 1.2; white-space: nowrap;
+    }
+    .nav-logo-sub {
+      font-size: 9.5px; font-weight: 300; letter-spacing: 0.14em;
+      color: var(--brown-mid); text-transform: uppercase; white-space: nowrap;
+    }
+
+    .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+    .nav-links a {
+      font-size: 13px; font-weight: 400; color: var(--text-soft);
+      text-decoration: none; letter-spacing: 0.01em; white-space: nowrap;
+      transition: color 0.2s; position: relative;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -3px; left: 0; right: 0;
+      height: 1px; background: var(--brown);
+      transform: scaleX(0); transform-origin: left; transition: transform 0.25s ease;
+    }
+    .nav-links a:hover { color: var(--brown); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+
+    .btn-cta-nav {
+      background: var(--brown); color: var(--cream) !important;
+      padding: 9px 18px; border-radius: 2px;
+      font-size: 12.5px !important; font-weight: 400 !important; letter-spacing: 0.05em !important;
+      text-decoration: none; transition: background 0.2s !important; white-space: nowrap;
+    }
+    .btn-cta-nav::after { display: none !important; }
+    .btn-cta-nav:hover { background: var(--brown-mid) !important; color: var(--cream) !important; }
+
+    .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-hamburger span { display: block; width: 22px; height: 1.5px; background: var(--brown); margin: 5px 0; transition: all 0.3s; }
+
+    /* ─── HERO ─── */
+    #inicio {
+      min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center; padding: 96px 5% 80px; position: relative;
+      gap: 60px; max-width: 1280px; margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--brown-mid); font-weight: 400; margin-bottom: 24px; white-space: nowrap;
+    }
+    .hero-eyebrow::before { content: ''; display: block; width: 28px; height: 1px; background: var(--brown-light); }
+
+    .hero-title {
+      font-family: var(--serif); font-size: clamp(44px, 5.5vw, 72px);
+      font-weight: 300; line-height: 1.12; color: var(--brown);
+      letter-spacing: -0.01em; margin-bottom: 28px;
+    }
+    .hero-title em { font-style: italic; font-weight: 300; }
+
+    .hero-desc {
+      font-size: 16px; color: var(--text-soft); line-height: 1.75;
+      max-width: 440px; margin-bottom: 44px; font-weight: 300;
+    }
+
+    .hero-actions { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-bottom: 56px; }
+
+    .btn-primary {
+      background: var(--brown); color: var(--cream);
+      padding: 14px 30px; border-radius: 2px;
+      font-size: 13.5px; font-weight: 400; letter-spacing: 0.07em;
+      text-decoration: none; transition: background 0.2s, transform 0.2s;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-primary:hover { background: var(--brown-mid); transform: translateY(-2px); }
+
+    .btn-secondary {
+      color: var(--brown); font-size: 13.5px; font-weight: 400; letter-spacing: 0.06em;
+      text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+      border-bottom: 1px solid var(--brown-light); padding-bottom: 2px;
+      transition: border-color 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--brown); }
+
+    .hero-badges { display: flex; gap: 28px; flex-wrap: wrap; }
+    .hero-badge { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-soft); font-weight: 300; }
+    .hero-badge-icon {
+      width: 28px; height: 28px; border-radius: 50%;
+      border: 1px solid var(--brown-light);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .hero-badge-icon svg { width: 13px; height: 13px; stroke: var(--brown-mid); fill: none; stroke-width: 1.5; }
+
+    .hero-visual { position: relative; display: flex; justify-content: center; align-items: flex-end; }
+    .hero-photo-frame { position: relative; width: 100%; max-width: 460px; }
+    .hero-photo-bg {
+      position: absolute; inset: 0; background: var(--cream-dark);
+      border-radius: 4px 4px 120px 4px; transform: translate(12px, 12px);
+    }
+    .hero-photo-img {
+      position: relative; z-index: 1; width: 100%; aspect-ratio: 4/5;
+      object-fit: cover; object-position: center 15%;
+      border-radius: 4px 4px 120px 4px; display: block; filter: sepia(15%) contrast(1.05);
+    }
+    .hero-name-badge {
+      position: absolute; z-index: 2; bottom: 24px; right: -16px;
+      background: var(--brown); color: var(--cream);
+      font-size: 10px; letter-spacing: 0.16em; font-weight: 400;
+      padding: 8px 14px; border-radius: 2px; text-transform: uppercase; white-space: nowrap;
+    }
+
+    /* Scroll indicator */
+    .scroll-hint {
+      position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 6px; opacity: 0.4;
+    }
+    .scroll-hint span {
+      font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--brown-mid); font-family: var(--sans); font-weight: 300;
+    }
+
+    /* ─── SECTION COMMON ─── */
+    section { padding: 100px 5%; }
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    .section-label {
+      display: flex; align-items: center; justify-content: center; gap: 14px;
+      font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--brown-mid); font-weight: 400; margin-bottom: 18px;
+    }
+    .section-label::before, .section-label::after {
+      content: ''; flex: 1; max-width: 48px; height: 1px; background: var(--brown-light);
+    }
+    .section-title {
+      font-family: var(--serif); font-size: clamp(34px, 4vw, 52px);
+      font-weight: 300; color: var(--brown);
+      text-align: center; line-height: 1.2; margin-bottom: 16px;
+    }
+    .section-subtitle {
+      text-align: center; color: var(--text-soft);
+      font-size: 16px; max-width: 520px; margin: 0 auto 64px;
+      font-weight: 300; line-height: 1.7;
+    }
+
+    /* ─── SOBRE ─── */
+    #sobre { background: var(--cream-mid); }
+
+    .sobre-layout {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 64px; align-items: start; margin-top: 56px;
+    }
+    .sobre-text-col { min-width: 0; }
+    .sobre-text { color: var(--text-soft); font-size: 15.5px; line-height: 1.8; font-weight: 300; margin-bottom: 16px; }
+    .sobre-text strong { color: var(--brown); font-weight: 500; }
+    .sobre-divider { width: 40px; height: 1px; background: var(--brown-light); margin: 24px 0; }
+    .gestalt-box {
+      background: var(--brown-pale); border-radius: 2px;
+      padding: 20px 22px; border-left: 2px solid var(--brown); margin-bottom: 12px;
+    }
+    .gestalt-box h4 { font-family: var(--serif); font-size: 17px; font-weight: 500; color: var(--brown); margin-bottom: 7px; }
+    .gestalt-box p { font-size: 13.5px; color: var(--text-soft); font-weight: 300; line-height: 1.7; }
+
+    .sobre-carousel-col { min-width: 0; position: relative; }
+
+    /* Carousel */
+    .carousel-wrap { position: relative; border-radius: 4px; overflow: hidden; width: 100%; }
+    .carousel-track { display: flex; width: 100%; transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1); }
+    .carousel-slide { flex: 0 0 100%; min-width: 0; width: 100%; }
+    .carousel-slide img { width: 100%; display: block; aspect-ratio: 4/5; object-fit: cover; object-position: center top; border-radius: 4px; }
+    .carousel-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 40px; height: 40px; border-radius: 50%;
+      background: oklch(97.2% 0.009 68 / 0.92); border: 1px solid var(--cream-dark);
+      color: var(--brown); cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s; z-index: 2;
+    }
+    .carousel-btn:hover { background: var(--cream); }
+    .carousel-prev { left: 12px; }
+    .carousel-next { right: 12px; }
+    .carousel-dots {
+      position: absolute; bottom: 14px; left: 0; right: 0;
+      display: flex; justify-content: center; gap: 6px; z-index: 2;
+    }
+    .carousel-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: oklch(97.2% 0.009 68 / 0.5);
+      border: none; cursor: pointer; transition: background 0.2s, transform 0.2s;
+    }
+    .carousel-dot.active { background: var(--cream); transform: scale(1.4); }
+
+    /* ─── ATENDIMENTOS ─── */
+    .atend-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      background: var(--cream-dark); border-radius: 4px; overflow: hidden; gap: 1px;
+    }
+    .atend-card {
+      background: var(--cream-mid); padding: 44px 36px;
+      transition: background 0.3s; cursor: default; position: relative; overflow: hidden;
+    }
+    .atend-card::before {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+      background: var(--brown); transform: scaleX(0); transform-origin: left; transition: transform 0.35s ease;
+    }
+    .atend-card:hover { background: var(--brown-pale); }
+    .atend-card:hover::before { transform: scaleX(1); }
+    .atend-icon { width: 44px; height: 44px; margin-bottom: 24px; display: flex; align-items: center; justify-content: center; }
+    .atend-icon svg { width: 28px; height: 28px; stroke: var(--brown); fill: none; stroke-width: 1.3; }
+    .atend-num { font-family: var(--serif); font-size: 11px; color: var(--brown-light); letter-spacing: 0.12em; margin-bottom: 12px; display: block; }
+    .atend-name { font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--brown); line-height: 1.2; margin-bottom: 14px; }
+    .atend-desc { font-size: 14px; color: var(--text-soft); font-weight: 300; line-height: 1.7; }
+
+    /* ─── COMO FUNCIONA ─── */
+    #como-funciona { background: var(--brown); }
+    #como-funciona .section-label { color: var(--brown-light); }
+    #como-funciona .section-label::before,
+    #como-funciona .section-label::after { background: oklch(72% 0.042 55 / 0.4); }
+    #como-funciona .section-title { color: var(--cream); }
+    #como-funciona .section-subtitle { color: oklch(80% 0.025 60); }
+
+    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); position: relative; }
+    .steps-grid::before {
+      content: ''; position: absolute; top: 52px; left: calc(16.66% + 20px); right: calc(16.66% + 20px);
+      height: 1px; background: oklch(60% 0.04 52); pointer-events: none;
+    }
+    .step { padding: 40px 36px; text-align: center; }
+    .step-num-wrap { display: flex; justify-content: center; margin-bottom: 24px; }
+    .step-num {
+      width: 52px; height: 52px; border: 1px solid oklch(55% 0.05 52); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif); font-size: 22px; font-weight: 300; color: var(--brown-light);
+      background: var(--brown); position: relative; z-index: 1;
+    }
+    .step-title { font-family: var(--serif); font-size: 22px; font-weight: 400; color: var(--cream); margin-bottom: 12px; }
+    .step-desc { font-size: 14px; color: oklch(78% 0.025 60); font-weight: 300; line-height: 1.7; }
+
+    /* ─── QUOTE ─── */
+    #quote-band {
+      background: var(--brown-pale); padding: 96px 5%;
+      border-top: 1px solid var(--cream-dark); border-bottom: 1px solid var(--cream-dark);
+    }
+    .quote-inner { max-width: 760px; margin: 0 auto; text-align: center; }
+    .quote-mark { font-family: var(--serif); font-size: 80px; line-height: 0.5; color: var(--brown-light); display: block; margin-bottom: 24px; }
+    .quote-text { font-family: var(--serif); font-size: clamp(20px, 2.5vw, 28px); font-weight: 300; font-style: italic; color: var(--brown); line-height: 1.55; }
+    .quote-attr { margin-top: 24px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-soft); font-weight: 300; }
+
+    /* ─── FAQ ─── */
+    #faq { background: var(--cream-mid); }
+    .faq-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1px; background: var(--cream-dark); border-radius: 4px; overflow: hidden;
+    }
+    .faq-item { background: var(--cream); overflow: hidden; transition: background 0.2s; }
+    .faq-item:hover { background: var(--brown-pale); }
+    .faq-question {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 24px 28px; gap: 20px; text-align: left;
+    }
+    .faq-question-text { font-size: 15px; font-weight: 400; color: var(--text); font-family: var(--sans); line-height: 1.5; }
+    .faq-icon {
+      flex-shrink: 0; width: 28px; height: 28px; border: 1px solid var(--cream-dark); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.25s, border-color 0.25s, transform 0.35s;
+    }
+    .faq-icon svg { width: 12px; height: 12px; stroke: var(--brown-mid); fill: none; stroke-width: 2; transition: stroke 0.25s; }
+    .faq-item.open .faq-icon { background: var(--brown); border-color: var(--brown); transform: rotate(45deg); }
+    .faq-item.open .faq-icon svg { stroke: var(--cream); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; padding: 0 28px; }
+    .faq-item.open .faq-answer { max-height: 300px; padding: 0 28px 24px; }
+    .faq-answer p { font-size: 14.5px; color: var(--text-soft); font-weight: 300; line-height: 1.75; border-top: 1px solid var(--cream-dark); padding-top: 16px; }
+    .faq-cta { text-align: center; margin-top: 56px; }
+    .faq-cta p { font-size: 15px; color: var(--text-soft); margin-bottom: 20px; font-weight: 300; }
+
+    /* ─── CONTATO ─── */
+    #contato { background: var(--cream); }
+    .contato-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .contato-title { font-family: var(--serif); font-size: clamp(36px, 4vw, 54px); font-weight: 300; color: var(--brown); line-height: 1.15; margin-bottom: 20px; }
+    .contato-title em { font-style: italic; }
+    .contato-desc { font-size: 15.5px; color: var(--text-soft); font-weight: 300; line-height: 1.75; margin-bottom: 40px; max-width: 380px; }
+    .contato-links { display: flex; flex-direction: column; gap: 14px; }
+    .contato-link {
+      display: flex; align-items: center; gap: 14px; font-size: 15px;
+      color: var(--text-soft); text-decoration: none; font-weight: 300; transition: color 0.2s;
+    }
+    .contato-link:hover { color: var(--brown); }
+    .contato-link-icon {
+      width: 36px; height: 36px; border: 1px solid var(--cream-dark); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .contato-link:hover .contato-link-icon { border-color: var(--brown); background: var(--brown-pale); }
+    .contato-link-icon svg { width: 14px; height: 14px; stroke: var(--brown-mid); fill: none; stroke-width: 1.5; }
+    .btn-whatsapp {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #25D366; color: #fff; padding: 15px 30px; border-radius: 2px;
+      font-size: 14px; font-weight: 400; letter-spacing: 0.06em;
+      text-decoration: none; transition: background 0.2s, transform 0.2s; margin-top: 32px;
+    }
+    .btn-whatsapp:hover { background: #1eb856; transform: translateY(-2px); }
+    .btn-whatsapp svg { width: 18px; height: 18px; fill: #fff; }
+    .contato-right { background: var(--cream-mid); border-radius: 4px; padding: 48px 44px; }
+    .contato-right h3 { font-family: var(--serif); font-size: 26px; font-weight: 400; color: var(--brown); margin-bottom: 28px; }
+    .info-item { display: flex; gap: 14px; align-items: flex-start; padding: 18px 0; border-bottom: 1px solid var(--cream-dark); }
+    .info-item:last-child { border-bottom: none; }
+    .info-item-label { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brown-light); font-weight: 400; min-width: 120px; padding-top: 2px; }
+    .info-item-value { font-size: 15px; color: var(--text); font-weight: 300; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--text); padding: 48px 5%;
+      display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    }
+    .footer-logo img { height: 32px; filter: invert(1) sepia(1) saturate(0) brightness(0.85); }
+    .footer-nav { display: flex; gap: 28px; list-style: none; }
+    .footer-nav a { font-size: 12.5px; color: oklch(65% 0.02 60); text-decoration: none; font-weight: 300; letter-spacing: 0.04em; transition: color 0.2s; }
+    .footer-nav a:hover { color: var(--cream); }
+    .footer-copy { font-size: 11.5px; color: oklch(50% 0.02 60); font-weight: 300; }
+
+    /* ─── ANIMATIONS ─── */
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-in-delay-1 { transition-delay: 0.1s; }
+    .fade-in-delay-2 { transition-delay: 0.2s; }
+    .fade-in-delay-3 { transition-delay: 0.3s; }
+    .fade-in-delay-4 { transition-delay: 0.4s; }
+
+    /* ─── SOBRE EYEBROW ─── */
+    .sobre-eyebrow {
+      font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--brown-mid); font-weight: 400; margin-bottom: 18px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .sobre-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--brown-light); display: block; }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 900px) {
+      #inicio { grid-template-columns: 1fr; padding-top: 120px; gap: 40px; }
+      .hero-visual { order: -1; }
+      .hero-photo-frame { max-width: 300px; margin: 0 auto; }
+      .hero-name-badge { right: 0; }
+      .hero-desc { margin: 0 auto 36px; }
+      .hero-actions { justify-content: center; }
+      .hero-badges { justify-content: center; }
+      .scroll-hint { display: none; }
+
+      .sobre-layout { grid-template-columns: 1fr; gap: 40px; }
+      .sobre-carousel-col { order: -1; }
+
+      .atend-grid { grid-template-columns: 1fr; }
+
+      .steps-grid { grid-template-columns: 1fr; }
+      .steps-grid::before { display: none; }
+
+      .faq-grid { grid-template-columns: 1fr; }
+
+      .contato-grid { grid-template-columns: 1fr; gap: 48px; }
+
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex; flex-direction: column; align-items: flex-start;
+        position: fixed; top: 76px; left: 0; right: 0;
+        background: var(--cream); padding: 24px 5%;
+        border-bottom: 1px solid var(--cream-dark); gap: 20px; z-index: 99;
+      }
+      .nav-hamburger { display: block; }
+
+      footer { flex-direction: column; text-align: center; }
+      .footer-nav { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/5561981676377" target="_blank" rel="noopener" id="wa-float" title="Falar no WhatsApp" aria-label="Falar no WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.121 1.532 5.85L.054 23.454a.75.75 0 00.908.99l5.878-1.544A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.72 9.72 0 01-4.95-1.353l-.355-.21-3.685.968.985-3.59-.23-.369A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+</a>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="#inicio" class="nav-logo">
+    <img src="assets/logo.png" alt="Lucas Gomes Faria Psicólogo" />
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">Lucas Gomes Faria</span>
+      <span class="nav-logo-sub">Psicólogo · CRP 01/25153</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#inicio">Início</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#atendimentos">Atendimentos</a></li>
+    <li><a href="#como-funciona">Como Funciona</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contato">Contato</a></li>
+    <li><a href="https://wa.me/5561981676377" target="_blank" rel="noopener" class="btn-cta-nav">Agendar sessão</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="inicio">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Psicólogo em Brasília · DF</p>
+    <h1 class="hero-title">
+      Psicoterapia para<br>
+      <em>adolescentes</em><br>
+      e adultos
+    </h1>
+    <p class="hero-desc">
+      Acolhimento, escuta qualificada e cuidado psicológico em Brasília e online para todo o Brasil — com Gestalt-Terapia e TCC para promover bem-estar, autoconhecimento e relacionamentos mais saudáveis.
+    </p>
+    <div class="hero-actions">
+      <a href="https://wa.me/5561981676377" target="_blank" rel="noopener" class="btn-primary">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.121 1.532 5.85L.054 23.454a.75.75 0 00.908.99l5.878-1.544A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.72 9.72 0 01-4.95-1.353l-.355-.21-3.685.968.985-3.59-.23-.369A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+        Agendar atendimento
+      </a>
+      <a href="#sobre" class="btn-secondary">
+        Saiba mais
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="hero-badges">
+      <div class="hero-badge">
+        <div class="hero-badge-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <span>Ambiente seguro<br>e acolhedor</span>
+      </div>
+      <div class="hero-badge">
+        <div class="hero-badge-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+        <span>Sigilo e ética<br>profissional</span>
+      </div>
+      <div class="hero-badge">
+        <div class="hero-badge-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <span>Atendimento online<br>e presencial</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-photo-frame">
+      <div class="hero-photo-bg"></div>
+      <img class="hero-photo-img" src="assets/foto.jpg" alt="Lucas Gomes Faria — Psicólogo em Brasília" />
+      <span class="hero-name-badge">Lucas Gomes Faria</span>
+    </div>
+  </div>
+
+  <div class="scroll-hint" aria-hidden="true">
+    <span>Scroll</span>
+    <svg width="16" height="24" viewBox="0 0 16 24" fill="none" stroke="var(--brown-mid)" stroke-width="1.5"><rect x="1" y="1" width="14" height="22" rx="7"/><circle cx="8" cy="7" r="2" fill="var(--brown-mid)" stroke="none"><animate attributeName="cy" values="7;14;7" dur="2s" repeatCount="indefinite"/></circle></svg>
+  </div>
+</section>
+
+<!-- SOBRE MIM -->
+<section id="sobre">
+  <div class="container">
+    <p class="section-label fade-in">Sobre mim</p>
+    <h2 class="section-title fade-in">Lucas Gomes Faria</h2>
+
+    <div class="sobre-layout">
+      <!-- TEXT -->
+      <div class="sobre-text-col fade-in">
+        <p class="sobre-text">
+          Sou <strong>psicólogo em Brasília</strong> (CRP 01/25153), especializado em <strong>Gestalt-Terapia</strong>, Psicopedagogia e Avaliação Psicológica — e atuo desde <strong>2022</strong>. Realizo <strong>atendimentos presenciais e online</strong> (atendimento remoto) para adolescentes e adultos em todo o Brasil.
+        </p>
+        <p class="sobre-text">
+          Meu trabalho é centrado no cuidado e na escuta sensível da experiência de cada pessoa. Acredito num espaço ético, acolhedor e comprometido com sua história.
+        </p>
+        <div class="sobre-divider"></div>
+        <div class="gestalt-box">
+          <h4>O que é a Gestalt-Terapia?</h4>
+          <p>Uma abordagem humanista que foca na experiência presente, na tomada de consciência e na relação entre pessoa e contexto. Valoriza sua história, seus sentimentos e sua capacidade de crescer com autenticidade.</p>
+        </div>
+        <div class="gestalt-box">
+          <h4>Como integro técnicas da TCC nos meus atendimentos?</h4>
+          <p>Embora minha prática clínica esteja principalmente ancorada na Gestalt-Terapia, também integro técnicas da Terapia Cognitivo-Comportamental quando elas podem contribuir para o processo terapêutico. Esses recursos são utilizados de forma pontual e cuidadosa, auxiliando na identificação de pensamentos, emoções, comportamentos e padrões de funcionamento, sempre respeitando a singularidade de cada pessoa e o sentido da experiência vivida no aqui e agora.</p>
+        </div>
+      </div>
+
+      <!-- CAROUSEL -->
+      <div class="sobre-carousel-col fade-in fade-in-delay-2">
+        <div class="carousel-wrap">
+          <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-slide">
+              <img src="assets/carousel/slide-1.jpg" alt="Lucas Gomes Faria — Psicólogo" loading="lazy" />
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/carousel/slide-2.jpg" alt="Lucas Gomes Faria — Psicólogo" loading="lazy" />
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/carousel/slide-3.jpg" alt="Lucas Gomes Faria — Psicólogo" loading="lazy" />
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/carousel/slide-4.jpg" alt="Lucas Gomes Faria — Psicólogo" loading="lazy" />
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/carousel/slide-5.jpg" alt="Lucas Gomes Faria — Psicólogo" loading="lazy" />
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/carousel/slide-6.jpg" alt="Lucas Gomes Faria — Psicólogo" loading="lazy" />
+            </div>
+          </div>
+          <button class="carousel-btn carousel-prev" onclick="carouselPrev()" aria-label="Foto anterior">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="carousel-btn carousel-next" onclick="carouselNext()" aria-label="Próxima foto">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+          <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Navegação do carrossel">
+            <button class="carousel-dot active" onclick="carouselGo(0)" aria-label="Foto 1" role="tab" aria-selected="true"></button>
+            <button class="carousel-dot" onclick="carouselGo(1)" aria-label="Foto 2" role="tab" aria-selected="false"></button>
+            <button class="carousel-dot" onclick="carouselGo(2)" aria-label="Foto 3" role="tab" aria-selected="false"></button>
+            <button class="carousel-dot" onclick="carouselGo(3)" aria-label="Foto 4" role="tab" aria-selected="false"></button>
+            <button class="carousel-dot" onclick="carouselGo(4)" aria-label="Foto 5" role="tab" aria-selected="false"></button>
+            <button class="carousel-dot" onclick="carouselGo(5)" aria-label="Foto 6" role="tab" aria-selected="false"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ATENDIMENTOS -->
+<section id="atendimentos">
+  <div class="container">
+    <p class="section-label fade-in">Como posso te ajudar</p>
+    <h2 class="section-title fade-in">Atendimentos</h2>
+    <p class="section-subtitle fade-in">Cada processo é único. Ofereço diferentes modalidades para que você encontre o cuidado mais adequado para o seu momento.</p>
+    <div class="atend-grid">
+      <div class="atend-card fade-in fade-in-delay-1">
+        <div class="atend-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <span class="atend-num">01</span>
+        <h3 class="atend-name">Acompanhamento Psicológico Individual</h3>
+        <p class="atend-desc">Psicoterapia com escuta qualificada e presença — um espaço só para você falar, refletir e encontrar novos caminhos com apoio ético e cuidadoso.</p>
+      </div>
+      <div class="atend-card fade-in fade-in-delay-2">
+        <div class="atend-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 20h20M6 20V10M12 20V4M18 20v-6"/></svg>
+        </div>
+        <span class="atend-num">02</span>
+        <h3 class="atend-name">Sessões de RPG Terapêutico</h3>
+        <p class="atend-desc">Individual ou em grupo, o Role Playing Game Terapêutico utiliza o jogo narrativo como recurso clínico para explorar emoções, comportamentos e relações de forma lúdica e significativa.</p>
+      </div>
+      <div class="atend-card fade-in fade-in-delay-3">
+        <div class="atend-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <span class="atend-num">03</span>
+        <h3 class="atend-name">Avaliação Psicológica para Orientação Profissional</h3>
+        <p class="atend-desc">Processo de avaliação para apoiar a escolha de área de atuação e carreira, integrando autoconhecimento, mapeamento de habilidades e interesses.</p>
+      </div>
+      <div class="atend-card fade-in fade-in-delay-4">
+        <div class="atend-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <span class="atend-num">04</span>
+        <h3 class="atend-name">Avaliação Psicológica para Cirurgia Bariátrica</h3>
+        <p class="atend-desc">Avaliação psicológica criteriosa para pacientes em processo de indicação para cirurgia bariátrica, atendendo às exigências clínicas e éticas do procedimento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="como-funciona">
+  <div class="container">
+    <p class="section-label fade-in">O processo</p>
+    <h2 class="section-title fade-in">Como você será atendido</h2>
+    <p class="section-subtitle fade-in">Três passos simples para começar sua jornada de autoconhecimento.</p>
+    <div class="steps-grid">
+      <div class="step fade-in fade-in-delay-1">
+        <div class="step-num-wrap"><div class="step-num">1</div></div>
+        <h3 class="step-title">Agende sua sessão</h3>
+        <p class="step-desc">Entre em contato pelo WhatsApp e escolha o melhor dia e horário para você.</p>
+      </div>
+      <div class="step fade-in fade-in-delay-2">
+        <div class="step-num-wrap"><div class="step-num">2</div></div>
+        <h3 class="step-title">Sessão de acolhimento</h3>
+        <p class="step-desc">Nos conhecemos, você compartilha suas demandas e expectativas num espaço seguro.</p>
+      </div>
+      <div class="step fade-in fade-in-delay-3">
+        <div class="step-num-wrap"><div class="step-num">3</div></div>
+        <h3 class="step-title">Início do processo</h3>
+        <p class="step-desc">Construímos juntos um caminho de cuidado, consciência e transformação.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<div id="quote-band">
+  <div class="quote-inner fade-in">
+    <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+    <p class="quote-text">Como Gestalt-Terapeuta, compreendo a psicoterapia como um convite para tornar-se mais consciente de si, da relação com o outro e da forma como se está no mundo.</p>
+    <p class="quote-attr">— Lucas Gomes Faria, Psicólogo</p>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <p class="section-label fade-in">Dúvidas frequentes</p>
+    <h2 class="section-title fade-in">Perguntas frequentes</h2>
+    <p class="section-subtitle fade-in">Algumas das questões mais comuns sobre psicoterapia e como funciona o atendimento.</p>
+    <div class="faq-grid">
+
+      <div class="faq-item fade-in fade-in-delay-1">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-question-text">Como funciona a psicoterapia?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>A psicoterapia é um espaço de escuta, acolhimento e reflexão sobre questões emocionais, relacionais e existenciais. Ao longo do processo, buscamos compreender como você tem vivido determinadas situações, quais sentidos elas têm na sua história e quais possibilidades podem ser construídas a partir disso.</p></div>
+      </div>
+
+      <div class="faq-item fade-in fade-in-delay-2">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-question-text">Para quem é indicado o atendimento?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>O atendimento é voltado para adolescentes e adultos que estejam passando por dificuldades emocionais, conflitos relacionais, inseguranças, ansiedade, sofrimento psíquico, momentos de mudança ou que desejem se conhecer melhor.</p></div>
+      </div>
+
+      <div class="faq-item fade-in fade-in-delay-1">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-question-text">Qual é a sua abordagem?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>Minha principal abordagem é a Gestalt-Terapia, uma perspectiva que valoriza a experiência presente, a consciência de si, a relação com o outro e a forma como cada pessoa constrói seus modos de lidar com a vida. Também utilizo recursos técnicos de outras abordagens, como a Teoria Cognitivo-Comportamental (TCC) quando isso contribui para o processo terapêutico.</p></div>
+      </div>
+
+      <div class="faq-item fade-in fade-in-delay-2">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-question-text">Você atende adolescentes?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>Sim. O atendimento com adolescentes considera suas demandas emocionais, familiares, escolares e sociais, respeitando sua singularidade e seu momento de desenvolvimento. Quando necessário, também há diálogo com os responsáveis, sempre preservando o sigilo e os limites éticos do atendimento.</p></div>
+      </div>
+
+      <div class="faq-item fade-in fade-in-delay-1">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-question-text">Você atende adultos?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>Sim. O atendimento com adultos pode envolver questões relacionadas a ansiedade, autoestima, relações familiares e afetivas, trabalho, tomada de decisões, autoconhecimento, conflitos internos e outros sofrimentos que atravessam a vida cotidiana.</p></div>
+      </div>
+
+      <div class="faq-item fade-in fade-in-delay-2">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-question-text">O atendimento é online ou presencial?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>O atendimento pode ser realizado de forma online ou presencial, conforme disponibilidade e necessidade do paciente. A modalidade online mantém os mesmos princípios éticos, técnicos e de sigilo do atendimento presencial.</p></div>
+      </div>
+
+      <div class="faq-item fade-in fade-in-delay-1">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-question-text">Como funciona a primeira sessão?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>A primeira sessão é um momento de acolhimento e compreensão inicial da demanda. Conversamos sobre o que levou você a buscar psicoterapia, sua história, suas expectativas e as possibilidades de trabalho terapêutico. E isso já é o início do processo.</p></div>
+      </div>
+
+      <div class="faq-item fade-in fade-in-delay-2">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-question-text">Quanto tempo dura cada sessão?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>As sessões geralmente têm duração aproximada de 50 minutos.</p></div>
+      </div>
+
+      <div class="faq-item fade-in fade-in-delay-1">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-question-text">Com que frequência acontecem as sessões?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>Na maioria dos casos, as sessões acontecem semanalmente. Essa frequência pode ser conversada de acordo com a demanda, disponibilidade e necessidade do processo terapêutico. Tudo isso é combinado na primeira sessão.</p></div>
+      </div>
+
+      <div class="faq-item fade-in fade-in-delay-2">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-question-text">Psicoterapia é só para quem está em crise?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>Não. A psicoterapia pode ser buscada em momentos de crise, mas também pode ser um espaço de autoconhecimento, elaboração de experiências, cuidado emocional e desenvolvimento de formas mais saudáveis de se relacionar consigo mesmo, com os outros e com o mundo.</p></div>
+      </div>
+
+      <div class="faq-item fade-in fade-in-delay-1">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-question-text">O que eu preciso falar na terapia?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>Você não precisa chegar com tudo organizado. A sessão é justamente um espaço para construir sentido sobre aquilo que está sendo vivido. Às vezes, a pessoa chega com uma questão clara. Em outros momentos, chega apenas com um incômodo, uma sensação ou uma vontade de se compreender melhor.</p></div>
+      </div>
+
+      <div class="faq-item fade-in fade-in-delay-2">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-question-text">O atendimento é sigiloso?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>Sim. O sigilo profissional é um princípio fundamental da Psicologia. As informações compartilhadas em sessão são preservadas conforme as normas éticas da profissão, com exceções apenas nos casos previstos pelo Código de Ética e pelas legislações aplicáveis.</p></div>
+      </div>
+
+      <div class="faq-item fade-in fade-in-delay-1">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-question-text">Você prescreve medicamentos?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>Não. Psicólogos não prescrevem medicamentos. Quando necessário, pode ser indicado que o cliente também busque avaliação com médico psiquiatra, mantendo cada profissional sua função específica no cuidado.</p></div>
+      </div>
+
+      <div class="faq-item fade-in fade-in-delay-2">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-question-text">Como faço para agendar uma sessão?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>O agendamento é feito pelo WhatsApp: (61) 98167-6377. Entre em contato, apresente-se e me diga um pouco sobre o que está buscando. Combinamos um horário inicial para que possamos nos conhecer.</p></div>
+      </div>
+
+      <div class="faq-item fade-in fade-in-delay-1">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-question-text">Quanto custa a sessão? Tem convênio?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>Os valores são combinados diretamente via WhatsApp. No momento, não trabalho com convênios. Caso tenha interesse, entre em contato para conversarmos sobre as possibilidades.</p></div>
+      </div>
+
+      <div class="faq-item fade-in fade-in-delay-2">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-question-text">Qual é o seu CRP?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>Meu registro profissional é CRP 01/25153.</p></div>
+      </div>
+
+    </div>
+    <div class="faq-cta fade-in">
+      <p>Tem alguma outra dúvida? Estou à disposição.</p>
+      <a href="https://wa.me/5561981676377" target="_blank" rel="noopener" class="btn-primary">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.121 1.532 5.85L.054 23.454a.75.75 0 00.908.99l5.878-1.544A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.72 9.72 0 01-4.95-1.353l-.355-.21-3.685.968.985-3.59-.23-.369A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+        Falar no WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <div class="container">
+    <div class="contato-grid">
+      <div class="fade-in">
+        <p class="sobre-eyebrow">Vamos conversar</p>
+        <h2 class="contato-title">Estou aqui<br>para <em>te ouvir.</em></h2>
+        <p class="contato-desc">Entre em contato para agendar sua sessão. Atendo presencialmente em Brasília/DF e online para todo o Brasil.</p>
+        <div class="contato-links">
+          <a href="https://wa.me/5561981676377" target="_blank" rel="noopener" class="contato-link">
+            <div class="contato-link-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            (61) 98167-6377
+          </a>
+          <a href="mailto:lucasfariapsi@gmail.com" class="contato-link">
+            <div class="contato-link-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+            </div>
+            lucasfariapsi@gmail.com
+          </a>
+          <a href="https://instagram.com/psi.lucasfaria" target="_blank" rel="noopener" class="contato-link">
+            <div class="contato-link-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </div>
+            @psi.lucasfaria
+          </a>
+        </div>
+        <a href="https://wa.me/5561981676377" target="_blank" rel="noopener" class="btn-whatsapp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.121 1.532 5.85L.054 23.454a.75.75 0 00.908.99l5.878-1.544A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.72 9.72 0 01-4.95-1.353l-.355-.21-3.685.968.985-3.59-.23-.369A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+
+      <div class="contato-right fade-in fade-in-delay-1">
+        <h3>Informações</h3>
+        <div class="info-item">
+          <span class="info-item-label">Localização</span>
+          <span class="info-item-value">Brasília, DF — Brasil</span>
+        </div>
+        <div class="info-item">
+          <span class="info-item-label">Modalidade</span>
+          <span class="info-item-value">Presencial e Online (Remoto)</span>
+        </div>
+        <div class="info-item">
+          <span class="info-item-label">Público</span>
+          <span class="info-item-value">Adolescentes e Adultos</span>
+        </div>
+        <div class="info-item">
+          <span class="info-item-label">Abordagem</span>
+          <span class="info-item-value">Gestalt-Terapia</span>
+        </div>
+        <div class="info-item">
+          <span class="info-item-label">Registro</span>
+          <span class="info-item-value">CRP 01/25153</span>
+        </div>
+        <div class="info-item">
+          <span class="info-item-label">Horários e Valores</span>
+          <span class="info-item-value">A combinar via WhatsApp</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <img src="assets/logo.png" alt="Lucas Gomes Faria" />
+  </div>
+  <ul class="footer-nav">
+    <li><a href="#inicio">Início</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#atendimentos">Atendimentos</a></li>
+    <li><a href="#como-funciona">Como Funciona</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <p class="footer-copy">© 2025 Lucas Gomes Faria. Todos os direitos reservados.</p>
+</footer>
+
+<style>
+  #wa-float {
+    position: fixed; bottom: 28px; right: 28px; z-index: 200;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: #25D366; color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+    text-decoration: none; transition: transform 0.2s, box-shadow 0.2s;
+  }
+  #wa-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 28px rgba(37, 211, 102, 0.55);
+  }
+</style>
+
+<script>
+  // Nav scroll shadow
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  // Mobile menu
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }));
+
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Scroll spy
+  const sections = ['inicio', 'sobre', 'atendimentos', 'como-funciona', 'faq', 'contato'];
+  const navAs = document.querySelectorAll('.nav-links a');
+  function updateSpy() {
+    let current = '';
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && window.scrollY >= el.offsetTop - 100) current = id;
+    });
+    navAs.forEach(a => {
+      const href = a.getAttribute('href');
+      const isActive = href === '#' + current;
+      a.style.color = isActive ? 'var(--brown)' : '';
+      a.style.fontWeight = isActive ? '500' : '';
+    });
+  }
+  window.addEventListener('scroll', updateSpy, { passive: true });
+  updateSpy();
+
+  // FAQ toggle
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => {
+      el.classList.remove('open');
+      el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  // Carousel
+  let carouselIdx = 0;
+  const carouselTotal = 6;
+
+  function carouselUpdate() {
+    document.getElementById('carouselTrack').style.transform = 'translateX(-' + (carouselIdx * 100) + '%)';
+    const dots = document.querySelectorAll('.carousel-dot');
+    dots.forEach((d, i) => {
+      d.classList.toggle('active', i === carouselIdx);
+      d.setAttribute('aria-selected', i === carouselIdx ? 'true' : 'false');
+    });
+  }
+  function carouselNext() { carouselIdx = (carouselIdx + 1) % carouselTotal; carouselUpdate(); }
+  function carouselPrev() { carouselIdx = (carouselIdx - 1 + carouselTotal) % carouselTotal; carouselUpdate(); }
+  function carouselGo(i) { carouselIdx = i; carouselUpdate(); }
+
+  // Auto-advance carousel
+  let carouselTimer = setInterval(carouselNext, 5000);
+  document.querySelector('.carousel-wrap').addEventListener('mouseenter', () => clearInterval(carouselTimer));
+  document.querySelector('.carousel-wrap').addEventListener('mouseleave', () => { carouselTimer = setInterval(carouselNext, 5000); });
+
+  // Touch swipe
+  const track = document.getElementById('carouselTrack');
+  let touchStartX = 0;
+  track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40) dx < 0 ? carouselNext() : carouselPrev();
+  }, { passive: true });
+
+  // Keyboard navigation for carousel
+  document.querySelector('.carousel-wrap').addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') carouselPrev();
+    if (e.key === 'ArrowRight') carouselNext();
+  });
+</script>
+</body>
+</html>
